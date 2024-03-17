@@ -1,4 +1,4 @@
-package com.test.www.component.process;
+package www.lxy.component.process;
 
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.ItemProcessor;

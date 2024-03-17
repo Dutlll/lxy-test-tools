@@ -1,4 +1,4 @@
-package com.test.www.component.writer;
+package www.lxy.component.writer;
 
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.ItemWriter;

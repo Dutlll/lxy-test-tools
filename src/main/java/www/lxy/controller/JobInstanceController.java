@@ -1,6 +1,6 @@
-package com.test.www.controller;
+package www.lxy.controller;
 
-import com.test.www.component.jobConfig.JobConfig;
+import www.lxy.component.jobConfig.JobConfig;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParameter;

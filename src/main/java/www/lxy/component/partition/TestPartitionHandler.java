@@ -1,4 +1,4 @@
-package com.test.www.component.partition;
+package www.lxy.component.partition;
 
 import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.core.partition.PartitionHandler;

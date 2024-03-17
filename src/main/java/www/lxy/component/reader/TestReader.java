@@ -1,4 +1,4 @@
-package com.test.www.component.reader;
+package www.lxy.component.reader;
 
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.ItemReader;

@@ -1,4 +1,4 @@
-package com.test.www.concurrent;
+package www.lxy.concurrent;
 
 import javafx.util.Pair;
 

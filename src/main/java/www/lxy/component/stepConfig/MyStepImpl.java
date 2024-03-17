@@ -1,4 +1,4 @@
-package com.test.www.component.stepConfig;
+package www.lxy.component.stepConfig;
 
 import org.springframework.batch.core.JobInterruptedException;
 import org.springframework.batch.core.Step;

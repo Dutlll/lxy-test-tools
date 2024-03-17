@@ -1,4 +1,4 @@
-package com.test.www.concurrent;
+package www.lxy.concurrent;
 
 public class LogUtil {
     public static void threadStart(){

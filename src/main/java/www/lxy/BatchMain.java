@@ -1,4 +1,4 @@
-package com.test.www;
+package www.lxy;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

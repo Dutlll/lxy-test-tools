@@ -1,6 +1,6 @@
-package com.test.www.component.partition;
+package www.lxy.component.partition;
 
-import com.test.www.utils.GlobalPrint;
+import www.lxy.utils.GlobalPrint;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.partition.support.Partitioner;
 import org.springframework.batch.item.ExecutionContext;

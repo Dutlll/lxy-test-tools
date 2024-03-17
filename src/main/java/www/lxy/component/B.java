@@ -1,5 +1,5 @@
 
-package com.test.www.component;
+package www.lxy.component;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;

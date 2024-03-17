@@ -1,9 +1,9 @@
-package com.test.www.component.stepConfig;
+package www.lxy.component.stepConfig;
 
-import com.test.www.component.partition.TestParitiion;
-import com.test.www.component.process.TestProceccer;
-import com.test.www.component.reader.TestReader;
-import com.test.www.component.writer.TestWriter;
+import www.lxy.component.partition.TestParitiion;
+import www.lxy.component.process.TestProceccer;
+import www.lxy.component.reader.TestReader;
+import www.lxy.component.writer.TestWriter;
 import org.springframework.batch.core.SkipListener;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobScope;

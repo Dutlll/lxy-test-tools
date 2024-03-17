@@ -1,4 +1,4 @@
-package com.test.www.utils;
+package www.lxy.utils;
 
 public interface GlobalPrint {
     static Object lock = new Object();

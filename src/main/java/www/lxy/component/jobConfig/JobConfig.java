@@ -1,6 +1,6 @@
-package com.test.www.component.jobConfig;
+package www.lxy.component.jobConfig;
 
-import com.test.www.component.stepConfig.StepConfig;
+import www.lxy.component.stepConfig.StepConfig;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.launch.JobLauncher;
