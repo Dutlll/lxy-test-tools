@@ -37,18 +37,21 @@ public class TestReader implements ItemReader<String> {
     }
     @Override
     public String read() throws UnexpectedInputException, ParseException, NonTransientResourceException {
-        sleep();
-
         cmp++;
-        if (cmp == 60){
-            System.out.println("point out is 60...");
-        }
-        if (cmp % cmpChunkSize == 0){
-            return null;
+        if (cmp < 1000){
+            return String.valueOf(cmp);
         }else {
-            System.out.println("execute read..."+Thread.currentThread()+"   data:"+cmp);
-            return "testStr:" + cmp;
+            return null;
         }
+//        if (cmp == 60){
+//            System.out.println("point out is 60...");
+//        }
+//        if (cmp % cmpChunkSize == 0){
+//            return null;
+//        }else {
+//            System.out.println("execute read..."+Thread.currentThread()+"   data:"+cmp);
+//            return "testStr:" + cmp;
+//        }
 
     }
 }

@@ -61,6 +61,7 @@ public class JobInstanceController {
             return "error";
         }
     }
+
     private static final String RANDOM_VALUE = "RANDOM_VALUE";
     @RequestMapping("/run")
     @ResponseBody

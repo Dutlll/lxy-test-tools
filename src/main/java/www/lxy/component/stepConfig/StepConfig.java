@@ -32,7 +32,6 @@ public class StepConfig {
     private TestProceccer testProceccer;
     @Resource
     private TestWriter testWriter;
-
     @Bean
     public Step getTestStep() {
 
@@ -40,7 +39,7 @@ public class StepConfig {
         System.out.println("start one job and ready to build testStep...");
         System.out.println("start one job and ready to build testStep...");
 
-        final int threadNum = 1;
+        final int threadNum = 15;
 
         Executor threadPoolExecutor = new ThreadPoolExecutor(threadNum,threadNum,3, TimeUnit.SECONDS,new ArrayBlockingQueue<Runnable>(100));
         final ConcurrentTaskExecutor concurrentTaskExecutor = new ConcurrentTaskExecutor(threadPoolExecutor);
@@ -88,7 +87,7 @@ public class StepConfig {
                         System.out.println("3");
                     }
                 })
-//                .taskExecutor(concurrentTaskExecutor)
+                .taskExecutor(concurrentTaskExecutor)
                 .build();
     }
 
@@ -97,12 +96,10 @@ public class StepConfig {
     public PartitionHandler userPartitionHandler() {
         final int coreThreadNum = 6;
         Executor threadPoolExecutor = new ThreadPoolExecutor(coreThreadNum, coreThreadNum, 3, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(100));
-
         ConcurrentTaskExecutor concurrentTaskExecutor = new ConcurrentTaskExecutor(threadPoolExecutor);
-
         TaskExecutorPartitionHandler handler = new TaskExecutorPartitionHandler();
         handler.setGridSize(7633295);
-//        handler.setTaskExecutor(concurrentTaskExecutor);
+        handler.setTaskExecutor(concurrentTaskExecutor);
         handler.setStep(getTestStep());
         try {
             handler.afterPropertiesSet();
@@ -114,17 +111,13 @@ public class StepConfig {
 
     @Autowired
     private TestParitiion testParitiion;
-
     //主分区操作步骤
     @Bean
     @JobScope
     public Step testMasterStep() {
-
         final int coreThreadNum = 6;
         Executor threadPoolExecutor = new ThreadPoolExecutor(coreThreadNum, coreThreadNum, 3, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(100));
-
         ConcurrentTaskExecutor concurrentTaskExecutor = new ConcurrentTaskExecutor(threadPoolExecutor);
-
         return stepBuilderFactory.get("masterStep")
                 .partitioner("partition_StepName",new TestParitiion())
                 .partitionHandler(userPartitionHandler())
